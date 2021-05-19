@@ -1,7 +1,9 @@
 package com.frankmoley.crypto.asymmetric;
 
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import javax.xml.bind.DatatypeConverter;
 import java.security.KeyPair;
@@ -9,7 +11,7 @@ import java.security.KeyPair;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-//@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestMethodOrder(MethodOrderer.MethodName.class)
 class AsymmetricEncryptionUtilsTest {
 
     @Test

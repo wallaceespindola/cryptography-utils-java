@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 class KeyStoreUtilsTest {
 
     @Test
-    void createPrivateKeyJavaKeyStore() throws Exception{
+    void createPrivateKeyJavaKeyStore() throws Exception {
         SecretKey secretKey = SymmetricEncryptionUtils.createAESKey();
         String secretKeyHex = DatatypeConverter.printHexBinary(secretKey.getEncoded());
         KeyStore keyStore = KeyStoreUtils.createPrivateKeyJavaKeyStore("password", "foo", secretKey, "keyPassword");

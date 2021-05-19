@@ -10,12 +10,12 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.KeyPair;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DigitalSignatureUtilsTest {
 
     @Test
-    void digitalSignatureRoutine() throws Exception{
+    void digitalSignatureRoutine() throws Exception {
         URL uri = this.getClass().getClassLoader().getResource("demo.txt");
         Path path = Paths.get(uri.toURI());
         byte[] input = Files.readAllBytes(path);

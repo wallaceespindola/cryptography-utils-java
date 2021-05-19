@@ -5,7 +5,8 @@ import org.junit.jupiter.api.Test;
 import javax.crypto.SecretKey;
 import javax.xml.bind.DatatypeConverter;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class SymmetricEncryptionUtilsTest {
 
@@ -17,7 +18,7 @@ class SymmetricEncryptionUtilsTest {
     }
 
     @Test
-    void testAESCyrptoRoutine() throws Exception{
+    void testAESCyrptoRoutine() throws Exception {
         SecretKey key = SymmetricEncryptionUtils.createAESKey();
         byte[] initializationVector = SymmetricEncryptionUtils.createInitializationVector();
         String plainText = "This is the text we are going to hide in plain sight";

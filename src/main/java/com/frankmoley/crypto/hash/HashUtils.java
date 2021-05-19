@@ -10,14 +10,14 @@ public class HashUtils {
 
     private static final String SHA2_ALGORITHM = "SHA-256";
 
-    public static byte[] generateRandomSalt(){
+    public static byte[] generateRandomSalt() {
         byte[] salt = new byte[16];
         SecureRandom secureRandom = new SecureRandom();
         secureRandom.nextBytes(salt);
         return salt;
     }
 
-    public static byte[] createSHA2Hash(String input, byte[] salt) throws Exception{
+    public static byte[] createSHA2Hash(String input, byte[] salt) throws Exception {
         ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
         byteStream.write(salt);
         byteStream.write(input.getBytes());
@@ -27,11 +27,11 @@ public class HashUtils {
         return messageDigest.digest(valueToHash);
     }
 
-    public static String hashPassword(String password){
+    public static String hashPassword(String password) {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 
-    public static boolean verifyPassord(String password, String hashedPassword){
+    public static boolean verifyPassord(String password, String hashedPassword) {
         return BCrypt.checkpw(password, hashedPassword);
     }
 }
