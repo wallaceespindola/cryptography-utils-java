@@ -2,10 +2,15 @@
 
 # Cryptography utils in Java
 
+![Apache 2.0 License](https://img.shields.io/badge/License-Apache2.0-orange)
+![Java](https://img.shields.io/badge/Built_with-Java-blue)
+![Maven](https://img.shields.io/badge/Powered_by-Maven-green)
+
+## Introduction
+
 This project is dedicated to testing and validating various types of cryptography utils in Java implementations in Java. It
 showcases different algorithms and their usage, providing a practical insight into modern cryptography and security in Java
 applications.
-
 
 ## Prerequisites
 
